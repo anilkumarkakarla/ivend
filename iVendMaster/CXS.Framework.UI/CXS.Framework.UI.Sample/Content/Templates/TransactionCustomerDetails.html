@@ -1,0 +1,17 @@
+<div class="row transaction-customer-layout" style="margin: 0px;">
+    <div class="col-lg-2">
+        <div class="row">
+            <img ng-src="{{model.selectedCustomer.img}}" />
+        </div>
+    </div>
+    <div class="col-lg-5">
+        <div class="row"><label>ID:</label><span>{{model.selectedCustomer.id}}</span></div>
+        <div class="row"><label>Name:</label>{{model.selectedCustomer.name}}</div>
+        <div class="row"><label>Contact:</label>{{model.selectedCustomer.contact}}</div>
+    </div>
+    <div class="col-lg-5">
+        <div class="row"><label>Credit Limit:</label>{{model.selectedCustomer.creditLimit | currency : '$' : 2}}</div>
+        <div class="row"><label>Balance:</label>{{model.selectedCustomer.balance | currency : '$' : 2}}</div>
+        <div class="row"><label>Available Points:</label>{{model.selectedCustomer.availablePoints}}</div>
+    </div>
+</div>

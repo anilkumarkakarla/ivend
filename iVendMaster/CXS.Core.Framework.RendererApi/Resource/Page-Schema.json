@@ -1,0 +1,87 @@
+{
+  "Id": "213dd653-978d-4a7a-8415-bd4050854c32",
+  "Dependencies": [
+    "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js",
+    "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css",
+    "node_modules/Kendo/kendo.all.min.js",
+    "http://kendo.cdn.telerik.com/2016.1.112/styles/kendo.common-bootstrap.min.css",
+    "http://kendo.cdn.telerik.com/2016.1.112/styles/kendo.bootstrap.min.css",
+    "Components/employeeDashboard.js",
+    "Components/TransactionCustomerDetails.js",
+    "Components/TransactionItemGrid.js"
+  ],
+  "Form": {
+    "Controls": [
+      {
+        "Id": "213dd653-978d-4a7a-8415-bd4050854c32",
+        "Size": {
+          "Height": "200px",
+          "Width": "1200px",
+          "Left": "200px",
+          "Top": "30px",
+          "ColumnSpan": "10",
+          "RowSpan": "7"
+        },
+        "Position": {
+          "ControlPosition": "absolute",
+          "WidgetIndex": "3"
+        },
+        "TemplateSrc": "Content/Templates/EmployeeDashboard.html",
+        "Directive": "employee-dashboard",
+        "AdditionalAttributes": [
+          "event-processor",
+          "positioner"
+        ],
+        "Controls": null,
+        "IsContainer": false
+      },
+      {
+        "Id": "213dd653-978d-4a7a-8415-bd4050854c32",
+        "Size": {
+          "Height": "100px",
+          "Width": "600px",
+          "Left": "200px",
+          "Top": "400px",
+          "ColumnSpan": "10",
+          "RowSpan": "7"
+        },
+        "Position": {
+          "ControlPosition": "absolute",
+          "WidgetIndex": "3"
+        },
+        "TemplateSrc": "Content/Templates/TransactionCustomerDetails.html",
+        "Directive": "transaction-customer-details",
+        "AdditionalAttributes": [
+          "event-processor",
+          "positioner"
+        ],
+        "Controls": null,
+        "IsContainer": false
+      },
+      {
+        "Id": "213dd653-978d-4a7a-8415-bd4050854c32",
+        "Size": {
+          "Height": "200px",
+          "Width": "600px",
+          "Left": "200px",
+          "Top": "510px",
+          "ColumnSpan": "10",
+          "RowSpan": "7"
+        },
+        "Position": {
+          "ControlPosition": "absolute",
+          "WidgetIndex": "3"
+        },
+        "TemplateSrc": "Content/Templates/TransactionItemGrid.html",
+        "Directive": "transaction-item-grid",
+        "AdditionalAttributes": [
+          "event-processor",
+          "positioner"
+        ],
+        "Controls": null,
+        "IsContainer": false
+      }
+    ]
+  },
+  "DomAttributes": "drag='4' drag-channel='A' drop-channel='A' ui-on-drop='onDropOfComponentV1(4, $data)' style='border: dotted; position: relative; ' align='center' class='ui - draggable ui - draggable - handle ui - resizable'"
+}

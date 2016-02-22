@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="45dp"
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:background="@color/citixsys_main_text_color">
+    <android.support.percent.PercentFrameLayout
+        android:layout_height="match_parent"
+        android:layout_width="match_parent">
+        <EditText
+            android:id="@+id/customerSearchTextField"
+            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            app:layout_widthPercent="70%"
+            style="@style/SaleSearchTextField" />
+        <LinearLayout
+            android:id="@+id/sale_header_buttons_container"
+            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            app:layout_widthPercent="30%"
+            app:layout_marginLeftPercent="70%">
+            <ImageView
+                android:id="@+id/customersButton"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:scaleType="centerInside"
+                android:layout_gravity="center"
+                android:src="@android:drawable/ic_menu_gallery" />
+            <ImageView
+                android:id="@+id/detailsButton"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:scaleType="centerInside"
+                android:layout_gravity="center"
+                android:src="@android:drawable/ic_menu_gallery" />
+        </LinearLayout>
+    </android.support.percent.PercentFrameLayout>
+</LinearLayout>

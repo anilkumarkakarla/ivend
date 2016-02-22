@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ProjectGuid>{45E28133-9D58-442D-B0AB-F47DF66609BC}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>CXS.Mpos.POS.Android</RootNamespace>
+    <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
+    <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
+    <AndroidResgenClass>Resource</AndroidResgenClass>
+    <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
+    <AndroidApplication>True</AndroidApplication>
+    <AndroidUseLatestPlatformSdk>False</AndroidUseLatestPlatformSdk>
+    <AssemblyName>CXS.Mpos.POS.Android</AssemblyName>
+    <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
+    <TargetFrameworkVersion>v4.1</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidLinkMode>None</AndroidLinkMode>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Mono.Android" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="Xamarin.Android.Support.v4">
+      <HintPath>..\packages\Xamarin.Android.Support.v4.23.1.1.0\lib\MonoAndroid403\Xamarin.Android.Support.v4.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.v7.AppCompat">
+      <HintPath>..\packages\Xamarin.Android.Support.v7.AppCompat.23.1.1.0\lib\MonoAndroid403\Xamarin.Android.Support.v7.AppCompat.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.Percent">
+      <HintPath>..\packages\Xamarin.Android.Support.Percent.23.1.1.0\lib\MonoAndroid403\Xamarin.Android.Support.Percent.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.v7.CardView">
+      <HintPath>..\packages\Xamarin.Android.Support.v7.CardView.23.1.1.0\lib\MonoAndroid403\Xamarin.Android.Support.v7.CardView.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Resources\Resource.designer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Logging\LogStorage.cs" />
+    <Compile Include="Services\Persistence\IUserPrefs\AndroidUserPreferences.cs" />
+    <Compile Include="Activities\LoginActivity.cs" />
+    <Compile Include="Activities\MainMenuActivity.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Activities\SettingsActivity.cs" />
+    <Compile Include="Activities\BaseActivity.cs" />
+    <Compile Include="Activities\SideMenu\SideMenuItemAdapter.cs" />
+    <Compile Include="Services\File Manager\FileService.cs" />
+    <Compile Include="Activities\SideMenu\SideMenuAction.cs" />
+    <Compile Include="Activities\SideMenu\SideMenuBuilder.cs" />
+    <Compile Include="Activities\SaleActivity.cs" />
+    <Compile Include="Activities\CustomerDetailsActivity.cs" />
+    <Compile Include="Activities\CustomersActivity.cs" />
+    <Compile Include="Activities\Customers\CustomerListAdapter.cs" />
+    <Compile Include="Activities\Customers\CustomerViewHolder.cs" />
+    <Compile Include="Activities\Products\ProductListAdapter.cs" />
+    <Compile Include="Activities\Products\ProductViewHolder.cs" />
+    <Compile Include="Activities\ProductDetailsActivity.cs" />
+    <Compile Include="Activities\Sale\SaleItemListAdapter.cs" />
+    <Compile Include="Activities\Sale\SaleItemViewHolder.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AboutResources.txt" />
+    <None Include="Properties\AndroidManifest.xml" />
+    <None Include="Assets\AboutAssets.txt" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\values\Strings.xml" />
+    <AndroidResource Include="Resources\mipmap-xxxhdpi\Icon.png" />
+    <AndroidResource Include="Resources\mipmap-xxhdpi\Icon.png" />
+    <AndroidResource Include="Resources\mipmap-xhdpi\Icon.png" />
+    <AndroidResource Include="Resources\mipmap-mdpi\Icon.png" />
+    <AndroidResource Include="Resources\mipmap-hdpi\Icon.png" />
+    <AndroidResource Include="Resources\values\Styles.xml" />
+    <AndroidResource Include="Resources\drawable\rounded_input_field.xml" />
+    <AndroidResource Include="Resources\drawable\login_btn.xml" />
+    <AndroidResource Include="Resources\layout\side_menu_item.xml" />
+    <AndroidResource Include="Resources\layout\landing_item.xml" />
+    <AndroidResource Include="Resources\layout\my_day_item.xml" />
+    <AndroidResource Include="Resources\layout\side_menu.xml" />
+    <AndroidResource Include="Resources\layout\toolbar.xml" />
+    <AndroidResource Include="Resources\layout\main_menu_activity.xml" />
+    <AndroidResource Include="Resources\layout\settings_activity.xml" />
+    <AndroidResource Include="Resources\layout\login_activity.xml" />
+    <AndroidResource Include="Resources\layout\transactions_item.xml" />
+    <AndroidResource Include="Resources\values\colors.xml" />
+    <AndroidResource Include="Resources\layout\sale_activity.xml" />
+    <AndroidResource Include="Resources\menu\sale.xml" />
+    <AndroidResource Include="Resources\layout\sale_activity_header.xml" />
+    <AndroidResource Include="Resources\layout\sale_activity_footer.xml" />
+    <AndroidResource Include="Resources\drawable\sale_search_input_field.xml" />
+    <AndroidResource Include="Resources\drawable\sale_transaction_button.xml" />
+    <AndroidResource Include="Resources\layout\customer_details_activity.xml" />
+    <AndroidResource Include="Resources\layout\customer_list_item.xml" />
+    <AndroidResource Include="Resources\layout\customer_list_section_header.xml" />
+    <AndroidResource Include="Resources\layout\customers_activity_subheader.xml" />
+    <AndroidResource Include="Resources\layout\customers_activity.xml" />
+    <AndroidResource Include="Resources\layout\product_list_item.xml" />
+    <AndroidResource Include="Resources\layout\product_details_activity.xml" />
+    <AndroidResource Include="Resources\layout\product_details_item.xml" />
+    <AndroidResource Include="Resources\layout\sale_item.xml" />
+    <AndroidResource Include="Resources\menu\sale_item_details.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\drawable\" />
+    <Folder Include="Activities\" />
+    <Folder Include="Activities\SideMenu\" />
+    <Folder Include="Services\File Manager\" />
+    <Folder Include="Resources\menu\" />
+    <Folder Include="Activities\Products\" />
+    <Folder Include="Activities\Sale\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
+  <ItemGroup>
+    <ProjectReference Include="..\CXS.Mpos.Core\CXS.Mpos.Core.csproj">
+      <Project>{DB53C4E9-D06E-4C23-9EDC-9A2460B2B0C5}</Project>
+      <Name>CXS.Mpos.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CXS.Mpos.POS\CXS.Mpos.POS.csproj">
+      <Project>{69CDB0C9-170E-4A96-B979-CC091CF096E4}</Project>
+      <Name>CXS.Mpos.POS</Name>
+    </ProjectReference>
+  </ItemGroup>
+</Project>

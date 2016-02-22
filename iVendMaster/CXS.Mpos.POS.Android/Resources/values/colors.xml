@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="citixsys_main_color">#888888</color>
+    <color name="citixsys_light_gray_color">#CECECE</color>
+    <color name="citixsys_main_text_color">#636363</color>
+    <color name="citixsys_background_color">#ffffff</color>
+    <color name="citixsys_customers_alphabetical_panel_color">#9E9E9E</color>
+</resources>

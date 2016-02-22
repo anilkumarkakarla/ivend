@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7D7A70F9-FFE3-4C8D-A8F9-B8D2B361167C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>CXS.Mpos.Core.Tests</RootNamespace>
+    <AssemblyName>CXS.Mpos.Core.Tests</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseMSBuildEngine>False</UseMSBuildEngine>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="nunit.framework">
+      <HintPath>..\packages\NUnit.3.0.1\lib\portable-net45+win8+wp8+wpa81+Xamarin.Mac+MonoAndroid10+MonoTouch10+Xamarin.iOS10\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ParametersTest.cs" />
+    <Compile Include="OperationProcessor\OperationProcessorTest.cs" />
+    <Compile Include="OperationProcessor\FirstOperation.cs" />
+    <Compile Include="OperationProcessor\SecondOperation.cs" />
+    <Compile Include="OperationProcessor\ErrorOperation.cs" />
+    <Compile Include="ServicesTests\WebClientTest.cs" />
+    <Compile Include="DIContainer\DITests.cs" />
+    <Compile Include="DIContainer\DITestClass.cs" />
+    <Compile Include="DIContainer\DependenciesOptionalOperation.cs" />
+    <Compile Include="DIContainer\DependenciesRequiredOperation.cs" />
+    <Compile Include="DataBaseService\DataBaseServiceTests.cs" />
+    <Compile Include="DataBaseService\MockDataBasePathService.cs" />
+    <Compile Include="DIContainer\DITestInterface.cs" />
+    <Compile Include="DIContainer\DITestInterfaceImpl.cs" />
+    <Compile Include="OperationProcessor\LoadUserOperation.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\SQLitePCL.raw_basic.0.8.4\build\net45\SQLitePCL.raw_basic.targets" Condition="Exists('..\packages\SQLitePCL.raw_basic.0.8.4\build\net45\SQLitePCL.raw_basic.targets')" />
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="OperationProcessor\" />
+    <Folder Include="DataBaseService\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CXS.Mpos.Core\CXS.Mpos.Core.csproj">
+      <Project>{DB53C4E9-D06E-4C23-9EDC-9A2460B2B0C5}</Project>
+      <Name>CXS.Mpos.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CXS.Mpos.POS\CXS.Mpos.POS.csproj">
+      <Project>{69CDB0C9-170E-4A96-B979-CC091CF096E4}</Project>
+      <Name>CXS.Mpos.POS</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DIContainer\" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,136 @@
+/*  Begin Transaction */
+
+.transaction-layout{
+    font-size: 12px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.transaction-left-layout{
+    padding: 0;
+    color: #ffffff;
+}
+.transaction-customer-layout, .transaction-item-grid, .transaction-total-layout{
+    padding-bottom: 10px;
+}
+
+.transaction-customer-layout{
+    background-color: #343535;
+}
+
+.transaction-total-layout{
+    background-color: #000000;
+}
+
+.transaction-customer-layout{
+    padding-top: 10px;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.transaction-customer-layout label{
+    width:50%;
+}
+
+.transaction-item-grid .k-grid, .transaction-item-grid .k-widget {
+    border-radius:0;
+    border-style:none;
+}
+
+.transaction-item-grid .k-grid tr td, .transaction-item-grid .k-grid tr th{
+    border-style:none;
+    border-width:0;
+}
+
+.transaction-item-grid .k-grid tr th{
+}
+
+.transaction-item-grid .k-grid .k-alt{
+    background-color: #666460;
+    color: #ffffff;
+}
+
+.transaction-total-layout{
+    padding: 10px;
+}
+
+.transaction-total-layout .row .col-lg-2 div label{
+    display: table-caption;
+}
+
+.transaction-total-layout .row .col-lg-2 div span{
+    font-size: 18px;
+}
+
+.transaction-right-layout{
+    padding-right: 0;
+}
+
+.frequently-used-product-buttons div{
+    padding: 0px 5px 0px 0px;
+}
+
+.frequently-used-product-buttons button{
+    border: 1px solid #9a9691;
+    background-color: #ffffff;
+    padding: 0;
+    margin: 5px 0 5px 0;
+    text-transform: uppercase;
+    line-height: 39px;
+    width: 100%;
+}
+
+.navigation-menu-controller-dropdown {
+    width: 20px !important;
+    float: left;
+}
+
+.k-list-container {
+    width: 150px !important;
+    overflow: hidden !important;
+}
+
+.k-ff {
+    overflow: inherit !important;
+}
+
+.k-list {
+    overflow-x: hidden !important;
+}
+
+.k-item {
+    width: 100%;
+    overflow-x: hidden !important;
+}
+
+.k-animation-container {
+    width: 200px !important;
+    overflow: hidden !important;
+}
+
+.k-list-scroller .k-state-selected {
+    color: rgb(51, 51, 51) !important;
+    background-color: white !important;
+    border-color: white !important;
+}
+
+.k-dropdown-wrap {
+    background-color: #ebebeb !important;;
+}
+
+.button-container {
+     width: auto;
+     float: left;
+}
+
+.buttons-in-container {
+    float: left;
+}
+
+body { 
+    position: relative; 
+}
+:-webkit-any(body) {
+    position: static; 
+}
+
+/*  End Transaction */

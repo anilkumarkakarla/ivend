@@ -1,0 +1,12 @@
+{
+  "version": "1.0.0-*",
+  "frameworks": {
+    "net45+win+wpa81": {
+      "wrappedProject": "../../CXS.Core.Entities/CXS.Core.Entities.csproj",
+      "bin": {
+        "assembly": "../../CXS.Core.Entities/obj/{configuration}/CXS.Core.Entities.dll",
+        "pdb": "../../CXS.Core.Entities/obj/{configuration}/CXS.Core.Entities.pdb"
+      }
+    }
+  }
+}

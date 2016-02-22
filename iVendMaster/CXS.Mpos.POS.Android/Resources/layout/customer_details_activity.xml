@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="fill_parent"
+    android:layout_width="fill_parent"
+    android:orientation="vertical"
+    android:background="@color/citixsys_background_color">
+    <include
+        layout="@layout/toolbar" />
+    <ScrollView
+        android:layout_height="fill_parent"
+        android:layout_width="fill_parent">
+        <RelativeLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+            <ImageView
+                android:layout_height="150dp"
+                android:layout_width="150dp"
+                android:src="@android:drawable/ic_menu_gallery"
+                android:layout_alignParentRight="true" />
+            <LinearLayout
+                android:id="@+id/MainCustomerInfo"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:orientation="vertical"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true">
+                <EditText
+                    android:id="@+id/CustomerId"
+                    style="@style/LoginInputField"
+                    android:hint="@string/CustomerIdPlaceholder"
+                    android:inputType="textPersonName"
+                    android:paddingRight="10dp" />
+                <EditText
+                    android:id="@+id/CustomerFirstName"
+                    style="@style/LoginInputField"
+                    android:hint="@string/CustomerFirstNamePlaceholder"
+                    android:inputType="textPersonName"
+                    android:paddingRight="10dp" />
+                <EditText
+                    android:id="@+id/CustomerLastName"
+                    style="@style/LoginInputField"
+                    android:hint="@string/CustomerLastNamePlaceholder"
+                    android:inputType="textPersonName"
+                    android:paddingRight="10dp" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/CustomerDetailsButtons"
+                android:layout_height="60dp"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_below="@+id/MainCustomerInfo">
+                <Button
+                    android:background="@color/citixsys_main_color"
+                    android:fontFamily="sans-serif"
+                    android:id="@+id/personalButton"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="wrap_content"
+                    android:text="@string/CustomerPersonal"
+                    android:textColor="#FFFFFF"
+                    android:paddingRight="10dp"
+                    android:paddingLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp" />
+                <Button
+                    android:background="@color/citixsys_main_color"
+                    android:fontFamily="sans-serif"
+                    android:id="@+id/addressButton"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="wrap_content"
+                    android:text="@string/CustomerAddress"
+                    android:textColor="#FFFFFF"
+                    android:paddingRight="10dp"
+                    android:paddingLeft="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginBottom="10dp" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/CustomerContacts"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_below="@+id/CustomerDetailsButtons">
+                <TextView
+                    android:fontFamily="sans-serif"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@android:color/black"
+                    android:text="@string/CustomerContactTitle" />
+                <EditText
+                    android:id="@+id/CustomerWorkPhone"
+                    style="@style/LoginInputField"
+                    android:hint="@string/CustomerWorkPhonePlaceholder"
+                    android:inputType="phone"
+                    android:paddingRight="10dp" />
+                <EditText
+                    android:id="@+id/CustomerMobilePhone"
+                    style="@style/LoginInputField"
+                    android:hint="@string/CustomerMobilePhonePlaceholder"
+                    android:inputType="phone"
+                    android:paddingRight="10dp" />
+                <EditText
+                    android:id="@+id/CustomerEmail"
+                    style="@style/LoginInputField"
+                    android:hint="@string/CustomerEmailPlaceholder"
+                    android:inputType="textEmailAddress"
+                    android:paddingRight="10dp" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_below="@+id/CustomerContacts">
+                <TextView
+                    android:fontFamily="sans-serif"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@android:color/black"
+                    android:text="@string/CustomerAccountingTitle" />
+                <EditText
+                    android:id="@+id/CustomerWorkPhone"
+                    style="@style/LoginInputField"
+                    android:hint="@string/CustomerTaxNumberPlaceholder"
+                    android:inputType="phone"
+                    android:paddingRight="10dp" />
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+</LinearLayout>

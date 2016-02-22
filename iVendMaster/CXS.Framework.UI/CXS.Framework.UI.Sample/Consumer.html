@@ -1,0 +1,69 @@
+﻿<!DOCTYPE html>
+<html lang="en" ng-app="DemoLayout" style="overflow:hidden;">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript" src="node_modules/jquery/dist/jquery.js"></script>
+    <script type="text/javascript" src="node_modules/angular/angular.js"></script>
+    <script src="node_modules/oclazyload/dist/ocLazyLoad.js"></script>
+    <script src="../CXS.Framework.UI.Core/js/app-config.js"></script>
+    <script src="../CXS.Framework.UI.Core/js/pos.layout.js"></script>
+    <script type="text/javascript"  src="node_modules/Gridster/jquery.gridster.js"></script>
+
+    <link type="text/css" href="node_modules/Gridster/jquery.gridster.css" rel="stylesheet" />
+    <link type="text/css" href="Styles/GridsterStyle.css" rel="stylesheet" />
+    <link href="Styles/Style.css" rel="stylesheet" type="text/css" />
+
+</head>
+<body>
+<div id="outer-container" ng-controller="LayoutController">
+    <!--<div style="border: 1px solid; overflow: hidden;" class="gridster">-->
+    <div style="overflow: hidden; border: solid;" class="gridster">
+        <ul id="gridsterlist">
+        </ul>
+    </div>
+    <base-Directive page-id="213dd653-978d-4a7a-8415-bd4050854c32"></base-Directive>
+</div>
+
+<script type="text/javascript">
+
+    $(function(){
+        var containerHeight = config.gridster_height;
+        var containerWidth = config.gridster_width;
+        var columnCount = config.columns;
+        var rowCount = config.rows;
+        var cellWidth = containerWidth / columnCount;
+        var cellHeight = containerHeight / rowCount;
+
+        var gridster = $(".gridster ul").gridster({
+            widget_base_dimensions: [cellWidth, cellHeight],
+            widget_margins: [0, 0],
+            shift_widgets_up: false,
+            shift_larger_widgets_down: false,
+            collision: {
+                wait_for_mouseup: true
+            },
+            avoid_overlapped_widgets: true,
+            resize:{
+                enabled: false
+            }
+        }).data('gridster').disable();
+
+        $(".gridster").width(containerWidth);
+        $(".gridster").height(containerHeight);
+        $("#gridsterlist").width(containerWidth);
+        $("#gridsterlist").height(containerHeight);
+        
+        for(var colIndex = 1; colIndex<=columnCount; colIndex++) {
+            for(var rowIndex = 1; rowIndex<=rowCount; rowIndex++) {
+               //gridster.add_widget('<div style="border: 1px solid";/>', config.size_x, config.size_y, colIndex, rowIndex);
+                gridster.add_widget('<div/>', config.size_x, config.size_y, colIndex, rowIndex);
+            }
+        }
+        //Set the gridster object to angular scope
+        angular.element($("#outer-container")).scope().HoldGridsterInstance(gridster);
+    });
+
+</script>
+</body>
+</html>

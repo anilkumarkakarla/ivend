@@ -1,0 +1,207 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
+    <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ProjectGuid>{85AFCD1B-EA31-4A30-B367-1CD220B42880}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>CXS.Mpos.POS.iOS</RootNamespace>
+    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+    <AssemblyName>CXSMposPOSiOS</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Debug</OutputPath>
+    <DefineConstants>DEBUG;ENABLE_TEST_CLOUD;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <MtouchArch>i386</MtouchArch>
+    <MtouchLink>None</MtouchLink>
+    <MtouchDebug>true</MtouchDebug>
+    <MtouchProfiling>true</MtouchProfiling>
+    <CodesignKey>iPhone Developer</CodesignKey>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhone\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <MtouchArch>ARMv7, ARM64</MtouchArch>
+    <ConsolePause>false</ConsolePause>
+    <CodesignKey>iPhone Distribution: Symphony Teleca Corporation India Private Limited</CodesignKey>
+    <BuildIpa>true</BuildIpa>
+    <IpaPackageName>
+    </IpaPackageName>
+    <CodesignProvision>Automatic:InHouse</CodesignProvision>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <MtouchArch>i386</MtouchArch>
+    <ConsolePause>false</ConsolePause>
+    <MtouchLink>None</MtouchLink>
+    <CodesignKey>iPhone Developer</CodesignKey>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhone\Debug</OutputPath>
+    <DefineConstants>DEBUG;ENABLE_TEST_CLOUD;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <MtouchArch>ARMv7, ARM64</MtouchArch>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <MtouchProfiling>true</MtouchProfiling>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchDebug>true</MtouchDebug>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Xamarin.iOS" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="Calabash">
+      <HintPath>..\packages\Xamarin.TestCloud.Agent.0.17.1\lib\Xamarin.iOS10\Calabash.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+  </ItemGroup>
+  <ItemGroup>
+    <InterfaceDefinition Include="Resources\LaunchScreen.xib" />
+    <InterfaceDefinition Include="Base.lproj\Main.storyboard" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Info.plist" />
+    <None Include="Entitlements.plist" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Main.cs" />
+    <Compile Include="AppDelegate.cs" />
+    <Compile Include="Logging\LogStorage.cs" />
+    <Compile Include="Services\Persistence\UserPreferences.cs" />
+    <Compile Include="Controllers\BaseViewController.cs" />
+    <Compile Include="Controllers\BaseViewController.designer.cs">
+      <DependentUpon>BaseViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\LoginViewController.cs" />
+    <Compile Include="Controllers\LoginViewController.designer.cs">
+      <DependentUpon>LoginViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\SettingsViewController.cs" />
+    <Compile Include="Controllers\SettingsViewController.designer.cs">
+      <DependentUpon>SettingsViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\MenuViewController.cs" />
+    <Compile Include="Controllers\MenuViewController.designer.cs">
+      <DependentUpon>MenuViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Cells\Settings\TextSettingTableViewCell.cs" />
+    <Compile Include="Views\Cells\Settings\TextSettingTableViewCell.designer.cs">
+      <DependentUpon>TextSettingTableViewCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\ContainerViewController.cs" />
+    <Compile Include="Controllers\ContainerViewController.designer.cs">
+      <DependentUpon>ContainerViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\NavigationViewController.cs" />
+    <Compile Include="Models\View\MenuItem.cs" />
+    <Compile Include="Views\Cells\MenuTableViewCell.cs" />
+    <Compile Include="Views\Cells\MenuTableViewCell.designer.cs">
+      <DependentUpon>MenuTableViewCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\LandingViewController.cs" />
+    <Compile Include="Controllers\LandingViewController.designer.cs">
+      <DependentUpon>LandingViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Cells\Landing\LandingCollectionViewCell.cs" />
+    <Compile Include="Views\Cells\Landing\LandingCollectionViewCell.designer.cs">
+      <DependentUpon>LandingCollectionViewCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\NavigationViewController.designer.cs">
+      <DependentUpon>NavigationViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Services\FileManager\FileService.cs" />
+    <Compile Include="Resources\LocalizedStrings.cs" />
+    <Compile Include="Views\Cells\Landing\TransactionsCollectionViewCell.cs" />
+    <Compile Include="Views\Cells\Landing\TransactionsCollectionViewCell.designer.cs">
+      <DependentUpon>TransactionsCollectionViewCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Cells\Landing\MyDayCollectionViewCell.cs" />
+    <Compile Include="Views\Cells\Landing\MyDayCollectionViewCell.designer.cs">
+      <DependentUpon>MyDayCollectionViewCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\SaleViewController.cs" />
+    <Compile Include="Controllers\SaleViewController.designer.cs">
+      <DependentUpon>SaleViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Cells\SaleTableViewCell.cs" />
+    <Compile Include="Views\Cells\SaleTableViewCell.designer.cs">
+      <DependentUpon>SaleTableViewCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\CustomersViewController.cs" />
+    <Compile Include="Controllers\CustomersViewController.designer.cs">
+      <DependentUpon>CustomersViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\CustomerDetailViewController.cs" />
+    <Compile Include="Controllers\CustomerDetailViewController.designer.cs">
+      <DependentUpon>CustomerDetailViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Cells\Customer\PersonalDetailTableViewCell.cs" />
+    <Compile Include="Views\Cells\Customer\PersonalDetailTableViewCell.designer.cs">
+      <DependentUpon>PersonalDetailTableViewCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Cells\Customer\AddressTableViewCell.cs" />
+    <Compile Include="Views\Cells\Customer\AddressTableViewCell.designer.cs">
+      <DependentUpon>AddressTableViewCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Enums\CustomerDetailsViewType.cs" />
+    <Compile Include="Enums\CustomerPersonalDetailType.cs" />
+    <Compile Include="Views\Cells\Customer\CustomerTableViewCell.cs" />
+    <Compile Include="Views\Cells\Customer\CustomerTableViewCell.designer.cs">
+      <DependentUpon>CustomerTableViewCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Cells\ProductTableViewCell.cs" />
+    <Compile Include="Views\Cells\ProductTableViewCell.designer.cs">
+      <DependentUpon>ProductTableViewCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\ProductsViewController.cs" />
+    <Compile Include="Controllers\ProductsViewController.designer.cs">
+      <DependentUpon>ProductsViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\ProductDetailViewController.cs" />
+    <Compile Include="Controllers\ProductDetailViewController.designer.cs">
+      <DependentUpon>ProductDetailViewController.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
+  <ItemGroup>
+    <ProjectReference Include="..\CXS.Mpos.Core\CXS.Mpos.Core.csproj">
+      <Project>{DB53C4E9-D06E-4C23-9EDC-9A2460B2B0C5}</Project>
+      <Name>CXS.Mpos.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CXS.Mpos.POS\CXS.Mpos.POS.csproj">
+      <Project>{69CDB0C9-170E-4A96-B979-CC091CF096E4}</Project>
+      <Name>CXS.Mpos.POS</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <BundleResource Include="Resources\en.lproj\Localizable.strings" />
+  </ItemGroup>
+</Project>

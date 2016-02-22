@@ -1,0 +1,220 @@
+﻿<Page
+    x:Class="CXS.Mpos.POS.Windows.Pages.ProductDetailsScreen"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CXS.Mpos.POS.Windows.Pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Page.Resources>
+        <Style x:Key="SearchTextBoxStyle" TargetType="TextBox">
+            <Setter Property="Margin" Value="0,0,20,0"/>
+            <Setter Property="Width" Value="Auto"/>
+            <Setter Property="Height" Value="10"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="FontFamily" Value="Times New Roman"/>
+            <Setter Property="BorderBrush" Value="White"/>
+            <Setter Property="SelectionHighlightColor" Value="White"/>
+            <Setter Property="Foreground" Value="Black"/>
+            <Setter Property="TextAlignment" Value="Left"/>
+        </Style>
+        <Style x:Key="ItemNameTitle" TargetType="TextBlock">
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="Margin" Value="12,0,0,0"/>
+        </Style>
+        <Style x:Key="ItemCountTitle" TargetType="TextBlock">
+            <Setter Property="HorizontalAlignment" Value="Right"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+        </Style>
+    </Page.Resources>
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0" Height="50" Background="#FF767676">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <Grid Grid.Column="0"  VerticalAlignment="Center" Margin="12,0">
+                    <Border BorderThickness="0" CornerRadius="20" Background="White" BorderBrush="White">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <FontIcon Grid.Column="0" Margin="12,0,0,0" Height="24" Width="24" HorizontalAlignment="Left" Glyph="&#xE71E;"/>
+                            <TextBox Grid.Column="1" x:Uid="FindProductTextBox"  PlaceholderText="" Style="{StaticResource SearchTextBoxStyle}" Text=""/>
+                        </Grid>
+                    </Border>
+                </Grid>
+                <Button x:Uid="HistorySearchButton" Grid.Column="1" HorizontalAlignment="Stretch" Width="Auto" Height="Auto" Margin="4" VerticalAlignment="Stretch" Background="#FF767676">
+                    <FontIcon  Height="30" Width="30" Glyph="&#xE8F1;" Foreground="White"/>
+                </Button>
+                <Button x:Uid="OtherButton" Grid.Column="2" HorizontalAlignment="Stretch" Width="Auto" Height="Auto" Margin="4" VerticalAlignment="Stretch" Background="#FF767676">
+                    <FontIcon  Height="30" Width="30" Glyph="&#xE712;" Foreground="White"/>
+                </Button>
+            </Grid>
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="5*"/>
+                    <ColumnDefinition Width="1*"/>
+                </Grid.ColumnDefinitions>
+                <TextBox Grid.Column="0" Height="50" VerticalAlignment="Center" BorderThickness="0"/>
+                <Button Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="White">
+                    <FontIcon Glyph="&#xE894;"/>
+                </Button>
+            </Grid>
+            <Grid Grid.Row="2">
+                <ScrollViewer>
+                    <StackPanel>
+
+                        <Grid BorderBrush="Gray" BorderThickness="0,1,0,1" Height="40">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="3*"/>
+                                <ColumnDefinition Width="3*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Grid.Column="0" x:Uid="ItemCodeTitle" Text="Item Code:" Style="{StaticResource ItemNameTitle}"/>
+                            <TextBlock Grid.Column="1" x:Name="TitemCodeCountLabel"  Style="{StaticResource ItemCountTitle}"/>
+                            <Grid Grid.Column="2" Width="50" />
+                        </Grid>
+                        <Grid BorderBrush="Gray" BorderThickness="0,0,0,1" Height="40">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="3*"/>
+                                <ColumnDefinition Width="3*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Grid.Column="0" x:Uid="DescriptionTitle" Text="Description:" Style="{StaticResource ItemNameTitle}"/>
+                            <TextBlock Grid.Column="1" x:Name="DescriptionCountLabel"  Style="{StaticResource ItemCountTitle}"/>
+                            <Grid Grid.Column="2" Width="50" />
+                        </Grid>
+                        <Grid BorderBrush="Gray" BorderThickness="0,0,0,1" Height="40">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="3*"/>
+                                <ColumnDefinition Width="3*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Grid.Column="0" x:Uid="UOMTitle" Text="UOM:" Style="{StaticResource ItemNameTitle}"/>
+                            <TextBlock Grid.Column="1" x:Uid="UOMCountLabel" Text="1 Pcs" Style="{StaticResource ItemCountTitle}"/>
+                            <Grid Grid.Column="2" Width="50" />
+                        </Grid>
+                        <Grid BorderBrush="Gray" BorderThickness="0,0,0,1" Height="40">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="3*"/>
+                                <ColumnDefinition Width="3*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Grid.Column="0" x:Uid="QuantityTitle" Text="Quantity:" Style="{StaticResource ItemNameTitle}"/>
+
+                            <Grid Grid.Column="1" HorizontalAlignment="Right">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                </Grid.ColumnDefinitions>
+                                <Button Grid.Column="0" Width="50" Height="Auto" Margin="4,0" HorizontalAlignment="Center" Background="White" >
+                                    <FontIcon Glyph="&#xE738;"/>
+                                </Button>
+                                <Grid Grid.Column="1" CornerRadius="5" Width="60" Height="40" HorizontalAlignment="Right" VerticalAlignment="Center" BorderThickness="1" BorderBrush="Black">
+                                    <TextBox Grid.Column="1" x:Uid="QuantityCountTextBox" Text="1" Height="10" Width="10" BorderThickness="0" Margin="0" TextAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                </Grid>
+                            </Grid>
+                            <Grid Grid.Column="3" Width="50" HorizontalAlignment="Left" VerticalAlignment="Center">
+                                <Button Width="50" Height="Auto" Margin="4,0" Background="White">
+                                    <FontIcon Glyph="&#xE710;"/>
+                                </Button>
+                            </Grid>
+                        </Grid>
+                        <Grid BorderBrush="Gray" BorderThickness="0,0,0,1" Height="40">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="3*"/>
+                                <ColumnDefinition Width="3*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Grid.Column="0" x:Uid="PriceTitle" Text="Price:" Style="{StaticResource ItemNameTitle}"/>
+                            <TextBlock Grid.Column="1" x:Uid="PriceCountLabel" Text="$ 24.95" Style="{StaticResource ItemCountTitle}"/>
+                            <Grid Grid.Column="2" Width="50" />
+                        </Grid>
+                        <Grid BorderBrush="Gray" BorderThickness="0,0,0,1" Height="40">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="3*"/>
+                                <ColumnDefinition Width="3*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Grid.Column="0" x:Uid="TaxCodeTitle" Text="Tax Code:" Style="{StaticResource ItemNameTitle}"/>
+
+                            <TextBlock Grid.Column="1" x:Uid="TaxCodeCountLabel" Text="Exempt" Style="{StaticResource ItemCountTitle}"/>
+                            <Grid Grid.Column="2" Width="Auto" HorizontalAlignment="Right">
+                                <FontIcon Glyph="&#xE00F;"/>
+                            </Grid>
+                        </Grid>
+                        <Grid BorderBrush="Gray" BorderThickness="0,0,0,1" Height="40">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="3*"/>
+                                <ColumnDefinition Width="3*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Grid.Column="0" x:Uid="TaxAmountTitle" Text="Tax Amount:" Style="{StaticResource ItemNameTitle}"/>
+                            <TextBlock Grid.Column="1" x:Uid="TaxAmountCountLabel" Text="$ 0.00" Style="{StaticResource ItemCountTitle}"/>
+                            <Grid Grid.Column="2" Width="50" />
+                        </Grid>
+                        <Grid BorderBrush="Gray" BorderThickness="0,0,0,1" Height="40">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="3*"/>
+                                <ColumnDefinition Width="3*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Grid.Column="0" x:Uid="ManualDiscountTitle" Text="Manual Discount:"  Style="{StaticResource ItemNameTitle}"/>
+                            <TextBlock Grid.Column="1" x:Uid="ManualDiscountCountLabel" Text="$ 0.00%" Style="{StaticResource ItemCountTitle}"/>
+                            <Grid Grid.Column="2" Width="Auto" HorizontalAlignment="Right">
+                                <FontIcon Glyph="&#xE00F;"/>
+                            </Grid>
+                        </Grid>
+                        <Grid BorderBrush="Gray" BorderThickness="0,0,0,1" Height="40">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="3*"/>
+                                <ColumnDefinition Width="3*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Grid.Column="0" x:Uid="BatchSerialTitle" Text="Batch/Serial:" Style="{StaticResource ItemNameTitle}"/>
+                            <TextBlock Grid.Column="1" x:Uid="BatchSerialCountLabel" Text="Batch" Style="{StaticResource ItemCountTitle}"/>
+                            <Grid Grid.Column="2" Width="50" />
+                        </Grid>
+                        <Grid BorderBrush="Gray" BorderThickness="0,0,0,1" Height="40">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="3*"/>
+                                <ColumnDefinition Width="3*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Grid.Column="0" x:Uid="SalesPersonTitle" Text="Sales Person:" Style="{StaticResource ItemNameTitle}"/>
+                            <TextBlock Grid.Column="1" x:Uid="SalesPersonCountLabel" Style="{StaticResource ItemCountTitle}"/>
+                            <Grid Grid.Column="2" Width="Auto" HorizontalAlignment="Right">
+                                <FontIcon Glyph="&#xE00F;"/>
+                            </Grid>
+                        </Grid>
+                        <Grid Height="40">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="3*"/>
+                                <ColumnDefinition Width="3*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Grid.Column="0" x:Uid="SurchargeTitle" Text="Surcharge:" Style="{StaticResource ItemNameTitle}"/>
+                            <TextBlock Grid.Column="1" x:Uid="SurchargeCountLabel" Text="$0.00" Style="{StaticResource ItemCountTitle}"/>
+                            <Grid Grid.Column="2" Width="Auto" HorizontalAlignment="Right">
+                                <FontIcon Glyph="&#xE00F;"/>
+                            </Grid>
+                        </Grid>
+                    </StackPanel>
+                </ScrollViewer>
+            </Grid>
+        </Grid>
+    </Grid>
+</Page>

@@ -1,0 +1,306 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Backbutton.Content" xml:space="preserve">
+    <value>Back</value>
+  </data>
+  <data name="ErrorMasagesTextBlock.Text" xml:space="preserve">
+    <value>Error Message(s) here..</value>
+  </data>
+  <data name="HelpCellTitle" xml:space="preserve">
+    <value>HELP</value>
+  </data>
+  <data name="PasswordTextBox.PlaceholderText" xml:space="preserve">
+    <value>Enter Password</value>
+  </data>
+  <data name="PointOfSaleTextBlock.Text" xml:space="preserve">
+    <value>Point of Sale</value>
+  </data>
+  <data name="ServerURLLabel.Text" xml:space="preserve">
+    <value>Server Url</value>
+  </data>
+  <data name="SettingsCellTitle" xml:space="preserve">
+    <value>SETTINGS</value>
+  </data>
+  <data name="SetupTextBlock.Text" xml:space="preserve">
+    <value>Setup</value>
+  </data>
+  <data name="SignInButton.Content" xml:space="preserve">
+    <value>SIGN IN</value>
+  </data>
+  <data name="SignOut.ToolTipService.ToolTip" xml:space="preserve">
+    <value>SIGN OUT</value>
+  </data>
+  <data name="SupportCellTitle" xml:space="preserve">
+    <value>SUPPORT</value>
+  </data>
+  <data name="SyncronizeCellTitle" xml:space="preserve">
+    <value>SYNCHRONIZE</value>
+  </data>
+  <data name="textBlock.Text" xml:space="preserve">
+    <value>MENU</value>
+  </data>
+  <data name="ToLoginScreen.Content" xml:space="preserve">
+    <value>To login screen</value>
+  </data>
+  <data name="URLPlaceholder.PlaceholderText" xml:space="preserve">
+    <value>Url</value>
+  </data>
+  <data name="UsernameEnterTextBox.PlaceholderText" xml:space="preserve">
+    <value>Enter Username</value>
+  </data>
+  <data name="AppVersion" xml:space="preserve">
+    <value>Business Edition v {0}.{1}.{2}.{3}</value>
+  </data>
+  <data name="Completed.Text" xml:space="preserve">
+    <value>Completed</value>
+  </data>
+  <data name="Others.Text" xml:space="preserve">
+    <value>Others</value>
+  </data>
+  <data name="Pending.Text" xml:space="preserve">
+    <value>Pending</value>
+  </data>
+  <data name="CustomersItem" xml:space="preserve">
+    <value>CUSTOMERS</value>
+  </data>
+  <data name="FulfillmentItem" xml:space="preserve">
+    <value>FULFILLMENT</value>
+  </data>
+  <data name="GiftCardItem" xml:space="preserve">
+    <value>GIFT CARD</value>
+  </data>
+  <data name="ProductsItem" xml:space="preserve">
+    <value>PRODUCTS</value>
+  </data>
+  <data name="RefundItem" xml:space="preserve">
+    <value>REFUND</value>
+  </data>
+  <data name="SaleItem" xml:space="preserve">
+    <value>SALE</value>
+  </data>
+  <data name="SpecialOrderItem" xml:space="preserve">
+    <value>SPECIAL ORDER</value>
+  </data>
+  <data name="TransactionsItem" xml:space="preserve">
+    <value>TRANSACTIONS</value>
+  </data>
+  <data name="FindProductAutoSuggestBox.PlaceholderText" xml:space="preserve">
+    <value>Find Products, Barcode</value>
+  </data>
+  <data name="Commission.Text" xml:space="preserve">
+    <value>Commission</value>
+  </data>
+  <data name="CustomerTitle.Text" xml:space="preserve">
+    <value>Default customer</value>
+  </data>
+  <data name="HomePageTextBox.Content" xml:space="preserve">
+    <value>Take me directly to the Sale Transaction next time.</value>
+  </data>
+  <data name="DiscountTitle.Text" xml:space="preserve">
+    <value>Discount</value>
+  </data>
+  <data name="MyDayItem" xml:space="preserve">
+    <value>MY DAY</value>
+  </data>
+  <data name="ScanTitle.Text" xml:space="preserve">
+    <value>SCAN</value>
+  </data>
+  <data name="SalesTarget.Text" xml:space="preserve">
+    <value>Sales Target</value>
+  </data>
+  <data name="TaxTitle.Text" xml:space="preserve">
+    <value>Tax</value>
+  </data>
+  <data name="TodaysSale.Text" xml:space="preserve">
+    <value>Today Sale</value>
+  </data>
+  <data name="TotalTitle.Text" xml:space="preserve">
+    <value>Total</value>
+  </data>
+  <data name="BatchSerialTitle.Text" xml:space="preserve">
+    <value>Batch/Serial:</value>
+  </data>
+  <data name="Filter.Text" xml:space="preserve">
+    <value>Filter</value>
+  </data>
+  <data name="DescriptionTitle.Text" xml:space="preserve">
+    <value>Description:</value>
+  </data>
+  <data name="SortByCode.Text" xml:space="preserve">
+    <value>Sort by Code</value>
+  </data>
+  <data name="ItemCodeTitle.Text" xml:space="preserve">
+    <value>Item Code:</value>
+  </data>
+  <data name="SortByContact.Text" xml:space="preserve">
+    <value>Sort by Contact</value>
+  </data>
+  <data name="ManualDiscountTitle.Text" xml:space="preserve">
+    <value>Manual Discount:</value>
+  </data>
+  <data name="PriceTitle.Text" xml:space="preserve">
+    <value>Price:</value>
+  </data>
+  <data name="QuantityTitle.Text" xml:space="preserve">
+    <value>Quantity:</value>
+  </data>
+  <data name="SalesPersonTitle.Text" xml:space="preserve">
+    <value>Sales Person:</value>
+  </data>
+  <data name="SurchargeTitle.Text" xml:space="preserve">
+    <value>Surcharge:</value>
+  </data>
+  <data name="TaxAmountTitle.Text" xml:space="preserve">
+    <value>Tax Amount:</value>
+  </data>
+  <data name="TaxCodeTitle.Text" xml:space="preserve">
+    <value>Tax Code:</value>
+  </data>
+  <data name="UOMTitle.Text" xml:space="preserve">
+    <value>UOM:</value>
+  </data>
+  <data name="AccountingTitle.Text" xml:space="preserve">
+    <value>ACCOUNTING</value>
+  </data>
+  <data name="AddressInformationButton.Content" xml:space="preserve">
+    <value>Address</value>
+  </data>
+  <data name="AddToTransactionButton.Content" xml:space="preserve">
+    <value>ADD TO TRANSACTION BUTTON</value>
+  </data>
+  <data name="BillingAddressTitle.Text" xml:space="preserve">
+    <value>BILLING ADDRESS</value>
+  </data>
+  <data name="ContactTitle.Text" xml:space="preserve">
+    <value>CONTACT</value>
+  </data>
+  <data name="EditButton.Content" xml:space="preserve">
+    <value>EDIT</value>
+  </data>
+  <data name="MiscellaneousTitle.Text" xml:space="preserve">
+    <value>MISCELLANEOUS</value>
+  </data>
+  <data name="PersonalInformationButton.Content" xml:space="preserve">
+    <value>Personal</value>
+  </data>
+  <data name="ShippingAddressTitle.Text" xml:space="preserve">
+    <value>SHIPPING ADDRESS</value>
+  </data>
+</root>
